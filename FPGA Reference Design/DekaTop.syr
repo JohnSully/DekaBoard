@@ -1,0 +1,1110 @@
+Release 14.3 - xst P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: DekaTop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DekaTop.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DekaTop"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-ftg256
+
+---- Source Options
+Top Module Name                    : DekaTop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\ipcore_dir\linebuffer.vhd" into library work
+Parsing entity <linebuffer>.
+Parsing architecture <linebuffer_a> of entity <linebuffer>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\ipcore_dir\mcu.vhd" into library work
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\TMDS_encoder.vhd" into library work
+Parsing entity <TDMS_encoder>.
+Parsing architecture <Behavioral> of entity <tdms_encoder>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\misc_funcs.vhd" into library work
+Parsing package <misc_funcs>.
+Parsing package body <misc_funcs>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\VGA_TIMING.vhd" into library work
+Parsing entity <VGA_TIMING>.
+Parsing architecture <Behavioral> of entity <vga_timing>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\memcnt.vhd" into library work
+Parsing entity <memcnt>.
+Parsing architecture <Behavioral> of entity <memcnt>.
+WARNING:HDLCompiler:946 - "C:\DekaBoard\FPGA Reference Design\memcnt.vhd" Line 138: Actual for formal port c1 is neither a static name nor a globally static expression
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" into library work
+Parsing entity <framebuffer>.
+Parsing architecture <Behavioral> of entity <framebuffer>.
+WARNING:HDLCompiler:946 - "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" Line 100: Actual for formal port addrb is neither a static name nor a globally static expression
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\dvid.vhd" into library work
+Parsing entity <dvid>.
+Parsing architecture <Behavioral> of entity <dvid>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\clocking.vhd" into library work
+Parsing entity <clocking>.
+Parsing architecture <Behavioral> of entity <clocking>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\video.vhd" into library work
+Parsing entity <video>.
+Parsing architecture <Behavioral> of entity <video>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\ram_arbiter.vhd" into library work
+Parsing entity <ram_arbiter>.
+Parsing architecture <Behavioral> of entity <ram_arbiter>.
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" into library work
+Parsing entity <DekaTop>.
+Parsing architecture <Behavioral> of entity <dekatop>.
+WARNING:HDLCompiler:946 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" Line 215: Actual for formal port vblank is neither a static name nor a globally static expression
+Parsing VHDL file "C:\DekaBoard\FPGA Reference Design\ipcore_dir\CHAR_ROM_synth.vhd" into library work
+Parsing entity <CHAR_ROM>.
+Parsing architecture <spartan6> of entity <char_rom>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DekaTop> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ram_arbiter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <memcnt> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <video> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <framebuffer> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <linebuffer> (architecture <linebuffer_a>) from library <work>.
+WARNING:HDLCompiler:634 - "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" Line 85: Net <en_linebufa> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" Line 86: Net <addr_linebufa[11]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" Line 87: Net <d_linebufa[7]> does not have a driver.
+
+Elaborating entity <clocking> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dvid> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <TDMS_encoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_TIMING> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:89 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" Line 91: <mcu> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:634 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" Line 125: Net <MCU_DOUT[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DekaTop>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd".
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 192: Output port <RDY> of the instance <ram_arbit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 192: Output port <DATA_VALID> of the instance <ram_arbit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 224: Output port <mem_rd> of the instance <U_VIDEO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 241: Output port <IO_Byte_Enable> of the instance <mcu0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 241: Output port <GPI1_Interrupt> of the instance <mcu0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\dvid_test.vhd" line 241: Output port <UART_Tx> of the instance <mcu0> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <MCU_DOUT<31:8>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <IO_Read_Strobe_r>.
+    Found 1-bit register for signal <IO_Write_Strobe_r>.
+    Found 32-bit register for signal <IO_Address_r>.
+    Found 32-bit register for signal <IO_Write_data_r>.
+    Found 1-bit register for signal <IO_EN_r>.
+    Found 1-bit register for signal <IO_Ready>.
+    Found 1-bit register for signal <GPIO1>.
+    Summary:
+	inferred  69 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <DekaTop> synthesized.
+
+Synthesizing Unit <ram_arbiter>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\ram_arbiter.vhd".
+    Summary:
+	no macro.
+Unit <ram_arbiter> synthesized.
+
+Synthesizing Unit <memcnt>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\memcnt.vhd".
+WARNING:Xst:647 - Input <ADDR<31:25>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 24-bit register for signal <refresh_timer>.
+    Found 1-bit register for signal <MEM_DQM>.
+    Found 1-bit register for signal <RDY>.
+    Found 2-bit register for signal <MEM_BA>.
+    Found 1-bit register for signal <MEM_WEn>.
+    Found 1-bit register for signal <MEM_CASn>.
+    Found 1-bit register for signal <MEM_RASn>.
+    Found 13-bit register for signal <MEM_A>.
+    Found 1-bit register for signal <dout_en>.
+    Found 1-bit register for signal <MEM_CKE>.
+    Found 1-bit register for signal <all_precharged>.
+    Found 1-bit register for signal <is_initialized>.
+    Found 1-bit register for signal <refresh_pending>.
+    Found 2-bit register for signal <vblank_cnt>.
+    Found 4-bit register for signal <wait_timer>.
+    Found 1-bit register for signal <OK_STROBE>.
+    Found 1-bit register for signal <op_needs_strobe>.
+    Found 1-bit register for signal <row_activated>.
+    Found 2-bit register for signal <activated_bank>.
+    Found 13-bit register for signal <activated_row>.
+    Found 8-bit register for signal <mem_dout>.
+    Found 1-bit register for signal <vblank_last>.
+    Found 24-bit adder for signal <refresh_timer[23]_GND_14_o_add_8_OUT> created at line 1241.
+    Found 2-bit adder for signal <vblank_cnt[1]_GND_14_o_add_33_OUT> created at line 1241.
+    Found 24-bit subtractor for signal <GND_14_o_GND_14_o_sub_31_OUT<23:0>> created at line 1308.
+    Found 4-bit subtractor for signal <GND_14_o_GND_14_o_sub_40_OUT<3:0>> created at line 1308.
+    Found 1-bit tristate buffer for signal <MEM_DQ<7>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<6>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<5>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<4>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<3>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<2>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<1>> created at line 118
+    Found 1-bit tristate buffer for signal <MEM_DQ<0>> created at line 118
+    Found 24-bit comparator greater for signal <n0020> created at line 156
+    Found 24-bit comparator lessequal for signal <refresh_timer[23]_GND_14_o_LessThan_11_o> created at line 164
+    Found 24-bit comparator greater for signal <n0025> created at line 176
+    Found 24-bit comparator greater for signal <n0028> created at line 187
+    Found 24-bit comparator greater for signal <n0031> created at line 197
+    Found 24-bit comparator greater for signal <refresh_timer[23]_INV_15_o> created at line 213
+    Found 2-bit comparator not equal for signal <n0191> created at line 293
+    Found 13-bit comparator not equal for signal <n0194> created at line 293
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  82 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred 116 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <memcnt> synthesized.
+
+Synthesizing Unit <video>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\video.vhd".
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\video.vhd" line 165: Output port <Blue> of the instance <U_FRAMEBUFFER> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <video> synthesized.
+
+Synthesizing Unit <framebuffer>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd".
+        hRez = 640
+        vRez = 480
+        bytes_pix = 3
+WARNING:Xst:647 - Input <pixel_y<10:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <hSync> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <vSync> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\DekaBoard\FPGA Reference Design\framebuffer.vhd" line 91: Output port <doutb> of the instance <U_LINEBUF> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <Blue> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <addr_linebufa> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <d_linebufa> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <en_linebufa> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <mem_rd>.
+    Found 4-bit register for signal <delay>.
+    Found 8-bit register for signal <Green>.
+    Found 1-bit register for signal <pixel_clk_last>.
+    Found 4-bit subtractor for signal <GND_28_o_GND_28_o_sub_4_OUT<3:0>> created at line 1308.
+    Found 4-bit comparator greater for signal <GND_28_o_delay[3]_LessThan_3_o> created at line 115
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <framebuffer> synthesized.
+
+Synthesizing Unit <clocking>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\clocking.vhd".
+    Summary:
+	no macro.
+Unit <clocking> synthesized.
+
+Synthesizing Unit <dvid>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\dvid.vhd".
+    Found 10-bit register for signal <latched_green>.
+    Found 10-bit register for signal <latched_blue>.
+    Found 10-bit register for signal <shift_red>.
+    Found 10-bit register for signal <shift_green>.
+    Found 10-bit register for signal <shift_blue>.
+    Found 10-bit register for signal <shift_clock>.
+    Found 10-bit register for signal <latched_red>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <dvid> synthesized.
+
+Synthesizing Unit <TDMS_encoder>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\TMDS_encoder.vhd".
+    Found 4-bit register for signal <dc_bias>.
+    Found 10-bit register for signal <encoded>.
+    Found 4-bit adder for signal <n0156> created at line 55.
+    Found 4-bit adder for signal <n0159> created at line 55.
+    Found 4-bit adder for signal <n0162> created at line 55.
+    Found 4-bit adder for signal <n0165> created at line 55.
+    Found 4-bit adder for signal <n0168> created at line 55.
+    Found 4-bit adder for signal <n0171> created at line 55.
+    Found 4-bit adder for signal <ones> created at line 55.
+    Found 4-bit adder for signal <n0176> created at line 71.
+    Found 4-bit adder for signal <n0179> created at line 71.
+    Found 4-bit adder for signal <n0182> created at line 71.
+    Found 4-bit adder for signal <n0185> created at line 71.
+    Found 4-bit adder for signal <n0188> created at line 71.
+    Found 4-bit adder for signal <n0191> created at line 71.
+    Found 4-bit adder for signal <n0194> created at line 71.
+    Found 4-bit adder for signal <data_word_disparity> created at line 71.
+    Found 4-bit adder for signal <dc_bias[3]_data_word_disparity[3]_add_25_OUT> created at line 92.
+    Found 4-bit adder for signal <dc_bias[3]_GND_40_o_add_29_OUT> created at line 100.
+    Found 4-bit adder for signal <GND_40_o_data_word_disparity[3]_add_32_OUT> created at line 103.
+    Found 4-bit subtractor for signal <GND_40_o_GND_40_o_sub_27_OUT<3:0>> created at line 95.
+    Found 4-bit subtractor for signal <GND_40_o_GND_40_o_sub_31_OUT<3:0>> created at line 100.
+    Found 4-bit subtractor for signal <n0203> created at line 0.
+    Found 4-bit comparator greater for signal <GND_40_o_ones[3]_LessThan_9_o> created at line 61
+    Summary:
+	inferred  20 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <TDMS_encoder> synthesized.
+
+Synthesizing Unit <VGA_TIMING>.
+    Related source file is "C:\DekaBoard\FPGA Reference Design\VGA_TIMING.vhd".
+        hRez = 640
+        hStartSync = 656
+        hEndSync = 752
+        hMaxCount = 800
+        hsyncActive = '0'
+        vRez = 480
+        vStartSync = 490
+        vEndSync = 492
+        vMaxCount = 525
+        vsyncActive = '1'
+    Found 11-bit register for signal <pixel_y>.
+    Found 12-bit register for signal <r_hCounter>.
+    Found 12-bit register for signal <r_vCounter>.
+    Found 1-bit register for signal <r_hSync>.
+    Found 1-bit register for signal <r_vSync>.
+    Found 1-bit register for signal <r_blank>.
+    Found 11-bit register for signal <pixel_x>.
+    Found 12-bit adder for signal <r_vCounter[11]_GND_54_o_add_2_OUT> created at line 74.
+    Found 12-bit adder for signal <r_hCounter[11]_GND_54_o_add_4_OUT> created at line 77.
+    Found 12-bit comparator greater for signal <r_hCounter[11]_GND_54_o_LessThan_8_o> created at line 80
+    Found 12-bit comparator greater for signal <r_vCounter[11]_GND_54_o_LessThan_9_o> created at line 80
+    Found 12-bit comparator lessequal for signal <n0014> created at line 87
+    Found 12-bit comparator greater for signal <r_hCounter[11]_GND_54_o_LessThan_11_o> created at line 87
+    Found 12-bit comparator lessequal for signal <n0019> created at line 92
+    Found 12-bit comparator greater for signal <r_vCounter[11]_GND_54_o_LessThan_13_o> created at line 92
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <VGA_TIMING> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 67
+ 12-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 1
+ 24-bit subtractor                                     : 1
+ 4-bit adder                                           : 51
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 8
+# Registers                                            : 53
+ 1-bit register                                        : 24
+ 10-bit register                                       : 10
+ 11-bit register                                       : 2
+ 12-bit register                                       : 2
+ 13-bit register                                       : 2
+ 2-bit register                                        : 3
+ 24-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 5
+ 8-bit register                                        : 2
+# Comparators                                          : 18
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator not equal                           : 1
+ 2-bit comparator not equal                            : 1
+ 24-bit comparator greater                             : 5
+ 24-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 175
+ 1-bit 2-to-1 multiplexer                              : 131
+ 10-bit 2-to-1 multiplexer                             : 12
+ 12-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 6
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 6
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# Xors                                                 : 44
+ 1-bit xor2                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/mcu.ngc>.
+Reading core <ipcore_dir/linebuffer.ngc>.
+Loading core <mcu> for timing and area information for instance <mcu0>.
+Loading core <linebuffer> for timing and area information for instance <U_LINEBUF>.
+INFO:Xst:2261 - The FF/Latch <r_hCounter_0> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_0> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_1> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_1> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_2> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_2> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_3> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_3> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_4> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_4> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_5> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_5> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_6> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_6> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_7> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_7> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_8> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_8> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_9> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_9> 
+INFO:Xst:2261 - The FF/Latch <r_hCounter_10> in Unit <Inst_vga> is equivalent to the following FF/Latch, which will be removed : <pixel_x_10> 
+WARNING:Xst:1710 - FF/Latch <Green_0> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_1> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_2> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_3> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_4> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_5> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_6> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_7> (without init value) has a constant value of 0 in block <U_FRAMEBUFFER>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <TDMS_encoder>.
+The following registers are absorbed into accumulator <dc_bias>: 1 register on signal <dc_bias>.
+	The following adders/subtractors are grouped into adder tree <Madd_data_word_disparity_Madd1> :
+ 	<Madd_n0179_Madd> in block <TDMS_encoder>, 	<Madd_n0185_Madd> in block <TDMS_encoder>, 	<Madd_n0191_Madd> in block <TDMS_encoder>, 	<Madd_data_word_disparity_Madd> in block <TDMS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_ones_Madd1> :
+ 	<Madd_n0162_Madd> in block <TDMS_encoder>, 	<Madd_n0168_Madd> in block <TDMS_encoder>, 	<Madd_ones_Madd> in block <TDMS_encoder>.
+Unit <TDMS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_TIMING>.
+The following registers are absorbed into counter <r_hCounter>: 1 register on signal <r_hCounter>.
+Unit <VGA_TIMING> synthesized (advanced).
+
+Synthesizing (advanced) Unit <framebuffer>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+Unit <framebuffer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memcnt>.
+The following registers are absorbed into counter <vblank_cnt>: 1 register on signal <vblank_cnt>.
+The following registers are absorbed into counter <refresh_timer>: 1 register on signal <refresh_timer>.
+The following registers are absorbed into counter <wait_timer>: 1 register on signal <wait_timer>.
+Unit <memcnt> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 18
+ 12-bit adder                                          : 2
+ 24-bit subtractor                                     : 1
+ 4-bit adder                                           : 9
+ 4-bit subtractor                                      : 6
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 6
+# Counters                                             : 5
+ 12-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
+ 4-bit down counter                                    : 2
+# Accumulators                                         : 3
+ 4-bit updown loadable accumulator                     : 3
+# Registers                                            : 268
+ Flip-Flops                                            : 268
+# Comparators                                          : 18
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator not equal                           : 1
+ 2-bit comparator not equal                            : 1
+ 24-bit comparator greater                             : 5
+ 24-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 169
+ 1-bit 2-to-1 multiplexer                              : 130
+ 10-bit 2-to-1 multiplexer                             : 12
+ 12-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 6
+# Xors                                                 : 44
+ 1-bit xor2                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <r_vCounter_0> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_0> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_1> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_1> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_2> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_2> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_3> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_3> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_4> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_4> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_5> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_5> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_6> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_6> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_7> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_7> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_8> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_8> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_9> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_9> 
+INFO:Xst:2261 - The FF/Latch <r_vCounter_10> in Unit <VGA_TIMING> is equivalent to the following FF/Latch, which will be removed : <pixel_y_10> 
+WARNING:Xst:1710 - FF/Latch <Green_0> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_1> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_2> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_3> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_4> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_5> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_6> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Green_7> (without init value) has a constant value of 0 in block <framebuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <IO_Write_data_r_8> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_9> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_10> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_11> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_12> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_13> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_14> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_15> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_16> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_17> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_18> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_19> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_20> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_21> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_22> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_23> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_24> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_25> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_26> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_27> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_28> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_29> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_30> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Write_data_r_31> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_25> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_26> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_27> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_28> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_29> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_30> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <IO_Address_r_31> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <ram_arbit/U_MEMCNT/RDY> of sequential type is unconnected in block <DekaTop>.
+
+Optimizing unit <DekaTop> ...
+
+Optimizing unit <video> ...
+
+Optimizing unit <dvid> ...
+
+Optimizing unit <TDMS_encoder> ...
+
+Optimizing unit <VGA_TIMING> ...
+WARNING:Xst:2677 - Node <U_VIDEO/U_FRAMEBUFFER/pixel_clk_last> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:2677 - Node <U_VIDEO/U_FRAMEBUFFER/mem_rd> of sequential type is unconnected in block <DekaTop>.
+WARNING:Xst:1426 - The value init of the FF/Latch U_VIDEO/Inst_dvid/latched_green_8 hinder the constant cleaning in the block DekaTop.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_8> (without init value) has a constant value of 1 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_23> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_22> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_21> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_20> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_19> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_18> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_16> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_15> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_17> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <ram_arbit/U_MEMCNT/refresh_timer_14> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U_VIDEO/Inst_vga/r_hCounter_11> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <U_VIDEO/Inst_vga/r_hCounter_10> has a constant value of 0 in block <DekaTop>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ram_arbit/U_MEMCNT/MEM_BA_1> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <ram_arbit/U_MEMCNT/activated_bank_1> 
+INFO:Xst:2261 - The FF/Latch <ram_arbit/U_MEMCNT/MEM_A_11> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <ram_arbit/U_MEMCNT/activated_row_11> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/latched_green_7> in Unit <DekaTop> is equivalent to the following 4 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/latched_green_5> <U_VIDEO/Inst_dvid/latched_green_3> <U_VIDEO/Inst_dvid/latched_green_1> <U_VIDEO/Inst_dvid/latched_green_0> 
+INFO:Xst:2261 - The FF/Latch <ram_arbit/U_MEMCNT/MEM_A_12> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <ram_arbit/U_MEMCNT/activated_row_12> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/latched_green_9> in Unit <DekaTop> is equivalent to the following 3 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/latched_green_6> <U_VIDEO/Inst_dvid/latched_green_4> <U_VIDEO/Inst_dvid/latched_green_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_6> in Unit <DekaTop> is equivalent to the following 2 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_4> <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_7> in Unit <DekaTop> is equivalent to the following 4 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_5> <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_3> <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_1> <U_VIDEO/Inst_dvid/TDMS_encoder_red/encoded_0> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_red/dc_bias_3> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_dvid/TDMS_encoder_red/dc_bias_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_0> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_0> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_1> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_1> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_2> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_3> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_3> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_4> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_4> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_5> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_5> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_6> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_6> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_7> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_7> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_8> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_8> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_vga/r_hCounter_9> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <U_VIDEO/Inst_vga/pixel_x_9> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_7> in Unit <DekaTop> is equivalent to the following 4 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_5> <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_3> <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_1> <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_0> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_9> in Unit <DekaTop> is equivalent to the following 3 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_6> <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_4> <U_VIDEO/Inst_dvid/TDMS_encoder_green/encoded_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/latched_red_6> in Unit <DekaTop> is equivalent to the following 2 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/latched_red_4> <U_VIDEO/Inst_dvid/latched_red_2> 
+INFO:Xst:2261 - The FF/Latch <U_VIDEO/Inst_dvid/latched_red_7> in Unit <DekaTop> is equivalent to the following 4 FFs/Latches, which will be removed : <U_VIDEO/Inst_dvid/latched_red_5> <U_VIDEO/Inst_dvid/latched_red_3> <U_VIDEO/Inst_dvid/latched_red_1> <U_VIDEO/Inst_dvid/latched_red_0> 
+INFO:Xst:2261 - The FF/Latch <ram_arbit/U_MEMCNT/MEM_BA_0> in Unit <DekaTop> is equivalent to the following FF/Latch, which will be removed : <ram_arbit/U_MEMCNT/activated_bank_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DekaTop, actual ratio is 14.
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcu0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcu0> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+INFO:Xst:2260 - The FF/Latch <U0/ilmb/POR_FF_I> in Unit <mcu0> is equivalent to the following FF/Latch : <U0/dlmb/POR_FF_I> 
+INFO:Xst:2260 - The FF/Latch <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i> in Unit <mcu0> is equivalent to the following 31 FFs/Latches : <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i>
+   <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i> <U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i> 
+
+Final Macro Processing ...
+
+Processing Unit <DekaTop> :
+	Found 2-bit shift register for signal <U_VIDEO/Inst_dvid/latched_red_8>.
+Unit <DekaTop> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 213
+ Flip-Flops                                            : 213
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DekaTop.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1639
+#      GND                         : 3
+#      INV                         : 48
+#      LUT1                        : 45
+#      LUT2                        : 106
+#      LUT3                        : 185
+#      LUT4                        : 307
+#      LUT5                        : 159
+#      LUT6                        : 286
+#      LUT6_2                      : 106
+#      MULT_AND                    : 3
+#      MUXCY                       : 100
+#      MUXCY_L                     : 91
+#      MUXF5                       : 66
+#      MUXF6                       : 1
+#      MUXF7                       : 2
+#      VCC                         : 3
+#      XORCY                       : 128
+# FlipFlops/Latches                : 1100
+#      FD                          : 314
+#      FDC                         : 19
+#      FDC_1                       : 5
+#      FDCE                        : 15
+#      FDE                         : 250
+#      FDE_1                       : 8
+#      FDP                         : 5
+#      FDR                         : 181
+#      FDRE                        : 268
+#      FDRE_1                      : 1
+#      FDS                         : 11
+#      FDSE                        : 18
+#      ODDR2                       : 5
+# RAMS                             : 82
+#      RAM32X1D                    : 64
+#      RAMB16BWER                  : 18
+# Shift Registers                  : 94
+#      SRL16E                      : 82
+#      SRLC16E                     : 12
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 38
+#      IBUFG                       : 1
+#      IOBUF                       : 8
+#      OBUF                        : 25
+#      OBUFDS                      : 4
+# DCMs                             : 2
+#      DCM_SP                      : 2
+# Others                           : 1
+#      BSCAN_SPARTAN6              : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1100  out of  18224     6%  
+ Number of Slice LUTs:                 1464  out of   9112    16%  
+    Number used as Logic:              1242  out of   9112    13%  
+    Number used as Memory:              222  out of   2176    10%  
+       Number used as RAM:              128
+       Number used as SRL:               94
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2036
+   Number with an unused Flip Flop:     936  out of   2036    45%  
+   Number with an unused LUT:           572  out of   2036    28%  
+   Number of fully used LUT-FF pairs:   528  out of   2036    25%  
+   Number of unique control sets:        79
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    186    22%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               18  out of     32    56%  
+    Number using Block RAM only:         18
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                       | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+CLK_100                            | IBUFG                                                                                                       | 40    |
+CLK_100                            | DCM_SP:CLKFX                                                                                                | 840   |
+CLK_100                            | DCM_SP:CLKFX                                                                                                | 44    |
+CLK_100                            | DCM_SP:CLKFX180                                                                                             | 4     |
+CLK_100                            | DCM_SP:CLKDV                                                                                                | 72    |
+mcu0/U0/Debug.mdm_0/drck_i         | BUFG                                                                                                        | 209   |
+mcu0/U0/Debug.mdm_0/update         | NONE(mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/command_reg_0)| 40    |
+mcu0/GPI1_Interrupt                | NONE(mcu0/U0/Debug.mdm_0/MDM_Core_I1/PLB_Interconnect.PLBv46_rdDBus_DFF[31].PLBv46_rdBus_FDRE)              | 34    |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 19.648ns (Maximum Frequency: 50.896MHz)
+   Minimum input arrival time before clock: 7.382ns
+   Maximum output required time after clock: 6.532ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_100'
+  Clock period: 19.648ns (frequency: 50.896MHz)
+  Total number of paths / destination ports: 255931 / 3179
+-------------------------------------------------------------------------
+Delay:               4.912ns (Levels of Logic = 8)
+  Source:            IO_Address_r_12 (FF)
+  Destination:       ram_arbit/U_MEMCNT/mem_dout_7 (FF)
+  Source Clock:      CLK_100 rising
+  Destination Clock: CLK_100 rising 1.3X
+
+  Data Path: IO_Address_r_12 to ram_arbit/U_MEMCNT/mem_dout_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.617  IO_Address_r_12 (IO_Address_r_12)
+     LUT3:I2->O            3   0.205   0.879  Mmux_MCU_ADDR41 (MCU_ADDR<12>)
+     LUT6:I3->O            1   0.205   0.000  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_lut<0> (ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<0> (ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<1> (ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<2> (ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<3> (ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<3>)
+     MUXCY:CI->O          15   0.019   0.981  ram_arbit/U_MEMCNT/Mcompar_activated_row[12]_row_in[12]_not_equal_44_o_cy<4> (ram_arbit/U_MEMCNT/activated_row[12]_row_in[12]_not_equal_44_o)
+     INV:I->O              8   0.206   0.802  ram_arbit/U_MEMCNT/_n04841_cepot_cepot_INV_0 (ram_arbit/U_MEMCNT/_n04841_cepot_cepot)
+     FDE:CE                    0.322          ram_arbit/U_MEMCNT/mem_dout_0
+    ----------------------------------------
+    Total                      4.912ns (1.633ns logic, 3.279ns route)
+                                       (33.2% logic, 66.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mcu0/U0/Debug.mdm_0/drck_i'
+  Clock period: 6.989ns (frequency: 143.092MHz)
+  Total number of paths / destination ports: 345 / 249
+-------------------------------------------------------------------------
+Delay:               3.494ns (Levels of Logic = 2)
+  Source:            mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 (FF)
+  Destination:       mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE (FF)
+  Source Clock:      mcu0/U0/Debug.mdm_0/drck_i rising
+  Destination Clock: mcu0/U0/Debug.mdm_0/drck_i falling
+
+  Data Path: mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 to mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.447   0.931  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter_3 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/tdi_shifter<3>)
+     LUT4:I0->O            1   0.203   0.808  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected_SW0 (N106)
+     LUT6:I3->O            1   0.205   0.579  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/sync_detected)
+     FDRE_1:CE                 0.322          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE
+    ----------------------------------------
+    Total                      3.494ns (1.177ns logic, 2.317ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mcu0/U0/Debug.mdm_0/update'
+  Clock period: 8.526ns (frequency: 117.283MHz)
+  Total number of paths / destination ports: 251 / 49
+-------------------------------------------------------------------------
+Delay:               4.263ns (Levels of Logic = 2)
+  Source:            mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_TClk (FF)
+  Source Clock:      mcu0/U0/Debug.mdm_0/update falling
+  Destination Clock: mcu0/U0/Debug.mdm_0/update rising
+
+  Data Path: mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/force_stop_TClk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           15   0.447   1.346  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/data_cmd)
+     LUT6:I0->O            4   0.203   0.912  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_GND_164_o_PWR_65_o_MUX_4604_o111 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_GND_164_o_PWR_65_o_MUX_4604_o11)
+     LUT5:I2->O            9   0.205   0.829  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En<0>1 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Control_Reg_En)
+     FDCE:CE                   0.322          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/single_Step_TClk
+    ----------------------------------------
+    Total                      4.263ns (1.177ns logic, 3.086ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mcu0/GPI1_Interrupt'
+  Clock period: 2.001ns (frequency: 499.763MHz)
+  Total number of paths / destination ports: 137 / 81
+-------------------------------------------------------------------------
+Delay:               2.001ns (Levels of Logic = 5)
+  Source:            mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I (FF)
+  Destination:       mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I (FF)
+  Source Clock:      mcu0/GPI1_Interrupt rising
+  Destination Clock: mcu0/GPI1_Interrupt rising
+
+  Data Path: mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I to mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.447   0.857  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].FDRE_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr<0>)
+     LUT1:I0->O            1   0.205   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I_rt (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I_rt)
+     MUXCY_L:S->LO         1   0.172   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[0].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<1>)
+     MUXCY_L:CI->LO        1   0.019   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[1].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<2>)
+     MUXCY_L:CI->LO        0   0.019   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[2].Used_MuxCY.MUXCY_L_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/addr_cy<3>)
+     XORCY:CI->O           1   0.180   0.000  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].XORCY_I (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/sum_A<3>)
+     FDRE:D                    0.102          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Use_UART.RX_FIFO_I/Addr_Counters[3].FDRE_I
+    ----------------------------------------
+    Total                      2.001ns (1.144ns logic, 0.857ns route)
+                                       (57.2% logic, 42.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_100'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 2)
+  Source:            MEM_DQ<7> (PAD)
+  Destination:       mcu0/U0/iomodule_0/io_bus_read_data_7 (FF)
+  Destination Clock: CLK_100 rising 1.3X
+
+  Data Path: MEM_DQ<7> to mcu0/U0/iomodule_0/io_bus_read_data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.579  MEM_DQ_7_IOBUF (N68)
+     begin scope: 'mcu0:IO_Read_Data<7>'
+     FDR:D                     0.102          U0/iomodule_0/io_bus_read_data_7
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mcu0/U0/Debug.mdm_0/drck_i'
+  Total number of paths / destination ports: 182 / 126
+-------------------------------------------------------------------------
+Offset:              3.185ns (Levels of Logic = 10)
+  Source:            mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT (PAD)
+  Destination:       mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7 (FF)
+  Destination Clock: mcu0/U0/Debug.mdm_0/drck_i rising
+
+  Data Path: mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT to mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    5   0.000   1.079  U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I (U0/Debug.mdm_0/shift)
+     LUT6:I0->O           17   0.203   1.132  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Mmux_shifting_Data1 (U0/microblaze_0_mdm_bus_Dbg_Shift)
+     LUT2:I0->O            1   0.203   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_lut<0> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<0> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<1> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<2> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<3> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<4> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<5> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<6> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count_xor<7> (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mcount_shift_count7)
+     FD:D                      0.102          U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_7
+    ----------------------------------------
+    Total                      3.185ns (0.974ns logic, 2.211ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'mcu0/U0/Debug.mdm_0/update'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              7.382ns (Levels of Logic = 6)
+  Source:            mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SEL (PAD)
+  Destination:       mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination Clock: mcu0/U0/Debug.mdm_0/update falling
+
+  Data Path: mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:SEL to mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL     7   0.000   1.021  U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I (U0/Debug.mdm_0/sel)
+     LUT5:I1->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/_n01281 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/_n0128)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].local_sel_n)
+     LUT4:I0->O            1   0.203   0.579  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].local_sel_n)
+     FDC_1:CLR                 0.430          U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+    ----------------------------------------
+    Total                      7.382ns (1.648ns logic, 5.734ns route)
+                                       (22.3% logic, 77.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_100'
+  Total number of paths / destination ports: 37 / 29
+-------------------------------------------------------------------------
+Offset:              4.642ns (Levels of Logic = 2)
+  Source:            ram_arbit/U_MEMCNT/dout_en (FF)
+  Destination:       MEM_DQ<7> (PAD)
+  Source Clock:      CLK_100 rising 1.3X
+
+  Data Path: ram_arbit/U_MEMCNT/dout_en to MEM_DQ<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  ram_arbit/U_MEMCNT/dout_en (ram_arbit/U_MEMCNT/dout_en)
+     INV:I->O              8   0.206   0.802  ram_arbit/U_MEMCNT/dout_en_inv1_INV_0 (ram_arbit/U_MEMCNT/dout_en_inv)
+     IOBUF:T->IO               2.571          MEM_DQ_7_IOBUF (MEM_DQ<7>)
+    ----------------------------------------
+    Total                      4.642ns (3.224ns logic, 1.418ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mcu0/U0/Debug.mdm_0/update'
+  Total number of paths / destination ports: 40 / 1
+-------------------------------------------------------------------------
+Offset:              4.739ns (Levels of Logic = 4)
+  Source:            mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 (FF)
+  Destination:       mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      mcu0/U0/Debug.mdm_0/update falling
+
+  Data Path: mcu0/U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 to mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q           14   0.447   1.302  U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command_5 (U0/Debug.mdm_0/MDM_Core_I1/JTAG_CONTROL_I/command<5>)
+     LUT5:I0->O            1   0.203   0.808  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i15 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i14)
+     LUT5:I2->O            1   0.205   0.684  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i17_SW0 (N110)
+     LUT6:I4->O            1   0.203   0.684  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i17 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i16)
+     LUT6:I4->O            0   0.203   0.000  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i139 (U0/Debug.mdm_0/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      4.739ns (1.261ns logic, 3.478ns route)
+                                       (26.6% logic, 73.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'mcu0/U0/Debug.mdm_0/drck_i'
+  Total number of paths / destination ports: 213 / 1
+-------------------------------------------------------------------------
+Offset:              6.532ns (Levels of Logic = 5)
+  Source:            mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 (FF)
+  Destination:       mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      mcu0/U0/Debug.mdm_0/drck_i rising
+
+  Data Path: mcu0/U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 to mcu0/U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              28   0.447   1.463  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count_2 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/shift_count<2>)
+     LUT3:I0->O            4   0.205   1.028  U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_TDO1111181 (U0/microblaze_I/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Mmux_TDO111118)
+     LUT6:I1->O            1   0.203   0.924  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i128 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i127)
+     LUT6:I1->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i129 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i128)
+     LUT6:I2->O            1   0.203   0.827  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i132 (U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i131)
+     LUT6:I2->O            0   0.203   0.000  U0/Debug.mdm_0/MDM_Core_I1/Mmux_TDO_i139 (U0/Debug.mdm_0/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          U0/Debug.mdm_0/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      6.532ns (1.464ns logic, 5.068ns route)
+                                       (22.4% logic, 77.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_100
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+CLK_100                   |   14.811|         |         |         |
+mcu0/GPI1_Interrupt       |    1.473|         |         |         |
+mcu0/U0/Debug.mdm_0/drck_i|    3.730|         |         |         |
+mcu0/U0/Debug.mdm_0/update|    2.815|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mcu0/GPI1_Interrupt
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+mcu0/GPI1_Interrupt       |    2.001|         |         |         |
+mcu0/U0/Debug.mdm_0/drck_i|    1.063|         |         |         |
+mcu0/U0/Debug.mdm_0/update|    1.334|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mcu0/U0/Debug.mdm_0/drck_i
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+CLK_100                   |    3.308|         |         |         |
+mcu0/GPI1_Interrupt       |    2.852|         |         |         |
+mcu0/U0/Debug.mdm_0/drck_i|    2.441|    3.477|    3.494|         |
+mcu0/U0/Debug.mdm_0/update|         |    4.804|    3.548|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock mcu0/U0/Debug.mdm_0/update
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+CLK_100                   |    2.508|         |         |         |
+mcu0/U0/Debug.mdm_0/drck_i|    1.232|         |         |         |
+mcu0/U0/Debug.mdm_0/update|         |    4.263|    7.955|         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.43 secs
+ 
+--> 
+
+Total memory usage is 277560 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   81 (   0 filtered)
+Number of infos    :   58 (   0 filtered)
+

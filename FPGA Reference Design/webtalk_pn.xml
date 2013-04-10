@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pn" timeStamp="Fri Mar 22 02:18:14 2013">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="07B4B1AEF8B94AA4945248D052DB62EE" type="project"/>
+<property name="ProjectIteration" value="22" type="project"/>
+<property name="ProjectFile" value="C:/DekaBoard/FPGA Reference Design/DekaBoard.xise" type="project"/>
+<property name="ProjectCreationTimestamp" value="2013-02-27T20:07:48" type="project"/>
+</section>
+<section name="Project Statistics" visible="true">
+<property name="PROPEXT_MapGlobalOptimization_spartan6" value="Speed" type="process"/>
+<property name="PROP_Enable_Message_Filtering" value="false" type="design"/>
+<property name="PROP_FitterReportFormat" value="HTML" type="process"/>
+<property name="PROP_LastAppliedGoal" value="Balanced" type="design"/>
+<property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
+<property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
+<property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/memcnt_test/u_mem" type="process"/>
+<property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
+<property name="PROP_SynthTopFile" value="changed" type="process"/>
+<property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
+<property name="PROP_UseSmartGuide" value="false" type="design"/>
+<property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
+<property name="PROP_intProjectCreationTimestamp" value="2013-02-27T20:07:48" type="design"/>
+<property name="PROP_intWbtProjectID" value="07B4B1AEF8B94AA4945248D052DB62EE" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="22" type="process"/>
+<property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
+<property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
+<property name="PROP_ngdbuild_otherCmdLineOptions" value="-bm ipcore_dir/mcu.bmm" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.mt48lc32m8a2" type="process"/>
+<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
+<property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_DevFamily" value="Spartan6" type="design"/>
+<property name="PROP_xilxMapEnableMultiThreading" value="2" type="process"/>
+<property name="PROP_xilxPostTrceGenTSIFile" value="true" type="process"/>
+<property name="PROP_DevDevice" value="xc6slx16" type="design"/>
+<property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
+<property name="PROP_ISimSimulationRunTime_behav_tb" value="300 us" type="process"/>
+<property name="PROP_DevPackage" value="ftg256" type="design"/>
+<property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
+<property name="PROP_parEnableMultiThreading_spartan6" value="4" type="process"/>
+<property name="PROP_DevSpeed" value="-3" type="design"/>
+<property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
+<property name="FILE_COREGEN" value="3" type="source"/>
+<property name="FILE_UCF" value="1" type="source"/>
+<property name="FILE_VERILOG" value="1" type="source"/>
+<property name="FILE_VHDL" value="12" type="source"/>
+</section>
+</application>
+</document>

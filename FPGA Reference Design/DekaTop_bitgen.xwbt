@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\DekaBoard\FPGA Reference Design\DekaTop.ncd
+OUTFILE=C:\DekaBoard\FPGA Reference Design\DekaTop.bit
+FAMILY=Spartan6
+PART=xc6slx16-3ftg256
+WORKINGDIR=C:\DekaBoard\FPGA Reference Design
+LICENSE=WebPack
+USER_INFO=210706536_0_0_453

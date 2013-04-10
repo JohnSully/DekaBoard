@@ -1,0 +1,135 @@
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop_preroute.twx DekaTop_map.ncd -o DekaTop_preroute.twr DekaTop.pcf -ucf ucf.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop_preroute.twx DekaTop_map.ncd -o DekaTop_preroute.twr DekaTop.pcf -ucf ucf.ucf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop_preroute.twx DekaTop_map.ncd -o DekaTop_preroute.twr DekaTop.pcf -ucf ucf.ucf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml DekaTop_preroute.twx DekaTop_map.ncd -o DekaTop_preroute.twr DekaTop.pcf -ucf ucf.ucf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-2 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 2 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3N "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3N -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3N -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3N "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3N -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3N -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3N "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3N -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3N -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx9-ftg256-3N "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx9-ftg256-3N -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3N -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx16-ftg256-3N "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-3N -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3N -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 
+xst -intstyle ise -ifn "C:/DekaBoard/FPGA Reference Design/DekaTop.xst" -ofn "C:/DekaBoard/FPGA Reference Design/DekaTop.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ucf.ucf -p xc6slx16-ftg256-3 "DekaTop.ngc" DekaTop.ngd -bm ipcore_dir/mcu.bmm 
+map -intstyle ise -p xc6slx16-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr off -lc off -power off -o DekaTop_map.ncd DekaTop.ngd DekaTop.pcf 
+par -w -intstyle ise -ol high -mt 4 DekaTop_map.ncd DekaTop.ncd DekaTop.pcf 
+trce -intstyle ise -v 3 -tsi DekaTop.tsi -s 3 -n 3 -fastpaths -xml DekaTop.twx DekaTop.ncd -o DekaTop.twr DekaTop.pcf -ucf ucf.ucf 
+bitgen -intstyle ise -f DekaTop.ut DekaTop.ncd 

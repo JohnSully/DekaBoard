@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Release 14.3 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml DekaTop_preroute.twx DekaTop_map.ncd -o
+DekaTop_preroute.twr DekaTop.pcf -ucf ucf.ucf
+
+Design file:              DekaTop_map.ncd
+Physical constraint file: DekaTop.pcf
+Device,package,speed:     xc6slx9,ftg256,C,-2 (PRODUCTION 1.23 2012-10-12)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_100
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+MEM_DQ<0>   |    1.722(R)|      FAST  |   -1.367(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<1>   |    1.710(R)|      FAST  |   -1.355(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<2>   |    1.713(R)|      FAST  |   -1.358(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<3>   |    1.534(R)|      FAST  |   -1.179(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<4>   |    0.601(R)|      FAST  |   -0.246(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<5>   |    0.408(R)|      FAST  |   -0.053(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<6>   |    0.674(R)|      FAST  |   -0.319(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+MEM_DQ<7>   |    0.609(R)|      FAST  |   -0.254(R)|      SLOW  |CLK_100_IBUFG_BUFG|   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK_100 to Pad
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                    | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)   | Phase  |
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+GPIO1       |         9.351(R)|      SLOW  |         6.905(R)|      FAST  |CLK_100_IBUFG_BUFG  |   0.000|
+MEM_A<0>    |         6.485(R)|      SLOW  |         3.981(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<1>    |         6.769(R)|      SLOW  |         4.206(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<2>    |         6.703(R)|      SLOW  |         4.140(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<3>    |         6.680(R)|      SLOW  |         4.176(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<4>    |         6.846(R)|      SLOW  |         4.342(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<5>    |         6.810(R)|      SLOW  |         4.306(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<6>    |         6.866(R)|      SLOW  |         4.303(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<7>    |         6.634(R)|      SLOW  |         4.071(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<8>    |         6.330(R)|      SLOW  |         3.826(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<9>    |         6.542(R)|      SLOW  |         4.038(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<10>   |         6.352(R)|      SLOW  |         3.804(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<11>   |         6.408(R)|      SLOW  |         3.845(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_A<12>   |         6.112(R)|      SLOW  |         3.608(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_BA<0>   |         5.915(R)|      SLOW  |         3.411(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_BA<1>   |         6.088(R)|      SLOW  |         3.584(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_CASn    |         5.661(R)|      SLOW  |         3.157(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_CKE     |         6.332(R)|      SLOW  |         3.828(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_CLK     |         5.935(R)|      SLOW  |         2.924(R)|      FAST  |CLK_167_BUFG        |   0.000|
+            |         5.935(F)|      SLOW  |         2.930(F)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<0>   |         6.587(R)|      SLOW  |         3.510(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<1>   |         6.550(R)|      SLOW  |         3.486(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<2>   |         6.572(R)|      SLOW  |         3.622(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<3>   |         6.420(R)|      SLOW  |         3.193(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<4>   |         6.508(R)|      SLOW  |         3.376(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<5>   |         6.622(R)|      SLOW  |         3.594(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<6>   |         6.500(R)|      SLOW  |         3.407(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQ<7>   |         6.500(R)|      SLOW  |         3.407(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_DQM     |         5.845(R)|      SLOW  |         3.341(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_RASn    |         5.859(R)|      SLOW  |         3.355(R)|      FAST  |CLK_167_BUFG        |   0.000|
+MEM_WEn     |         5.985(R)|      SLOW  |         3.422(R)|      FAST  |CLK_167_BUFG        |   0.000|
+tmds<0>     |         5.575(R)|      SLOW  |         2.585(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmds<1>     |         5.575(R)|      SLOW  |         2.585(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmds<2>     |         5.575(R)|      SLOW  |         2.585(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmds<3>     |         5.575(R)|      SLOW  |         2.585(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmdsb<0>    |         5.629(R)|      SLOW  |         2.601(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmdsb<1>    |         5.629(R)|      SLOW  |         2.601(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmdsb<2>    |         5.629(R)|      SLOW  |         2.601(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+tmdsb<3>    |         5.629(R)|      SLOW  |         2.601(R)|      FAST  |U_VIDEO/clk_dvi_BUFG|   0.000|
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+
+Clock to Setup on destination clock CLK_100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100        |   14.196|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Mar 22 01:26:07 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 233 MB
+
+
+
